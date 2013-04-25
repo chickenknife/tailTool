@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+ 
 
 namespace tailTool
 {
@@ -35,9 +36,12 @@ namespace tailTool
         {
             this.label1.Content = filefullName;
             selectedFile = new FileInfo(filefullName);
+            this.textBox1.Text = string.Empty;
+
             fw = new FileSystemWatcher(selectedFile.Directory.FullName, selectedFile.Name);
             fw.Changed += new FileSystemEventHandler(fw_Changed);
             fw.EnableRaisingEvents = true;
+
             reader = new StreamReader(
             new FileStream(selectedFile.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 8, true)
             , Encoding.GetEncoding(Convert.ToInt32(this.textBox2.Text)));
@@ -45,7 +49,6 @@ namespace tailTool
         }
 
         delegate void formdelegate();
-        int TextLength = 0;
         private void fw_Changed(object sender, FileSystemEventArgs e)
         {
             if (!renderstop)
