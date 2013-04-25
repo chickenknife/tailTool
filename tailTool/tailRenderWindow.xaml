@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="tailTool.tailRenderWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="413">
+    <Grid>
+        <Viewbox Height="26" HorizontalAlignment="Left" Margin="1" Name="viewbox1" VerticalAlignment="Top" Stretch="Uniform">
+            <Label Content="Open file"  Name="label1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Background="#50009400" VerticalAlignment="Stretch" Height="30"  MouseDown="label1_MouseDown" Cursor="Hand" />
+        </Viewbox>
+        <Label Content="Stop" Height="20" Margin="81,31,0,0" Name="label_StopRendering" VerticalAlignment="Top" Cursor="Hand" Background="#4E008AFF" MouseDown="label_StopRendering_MouseDown" MouseEnter="label_StopRendering_MouseEnter" MouseLeave="label_StopRendering_MouseLeave" Padding="1" FontWeight="Bold" Foreground="Black" Opacity="0.7" HorizontalAlignment="Left" Width="69" />
+        <Label Content="Clear" HorizontalAlignment="Left" Margin="3,31,0,0" Name="label_ClearText" Width="61" Cursor="Hand" Background="#60C422DE" MouseDown="label_ClearText_MouseDown" Height="20" FontSize="12" Padding="2" FontWeight="Black" Foreground="Black" Opacity="0.7" MouseEnter="label_ClearText_MouseEnter" MouseLeave="label_ClearText_MouseLeave" VerticalAlignment="Top" />
+        <ScrollViewer  HorizontalAlignment="Stretch" Name="scrollViewer1" VerticalAlignment="Stretch" Margin="0,50,0,0" BorderBrush="#E600008F" BorderThickness="1">
+            <TextBox  HorizontalAlignment="Stretch" Margin="1" Name="textBox1" VerticalAlignment="Stretch" TextWrapping="Wrap" TextChanged="textBox1_TextChanged" FontSize="11" BorderBrush="{x:Null}" Background="#FFF6FFF2" />
+        </ScrollViewer>
+        <TextBox Height="24" HorizontalAlignment="Right" Margin="0,27,0,0" Name="textBox2" VerticalAlignment="Top" Width="85" Text="932" />
+        <Label Content="Encoding" Height="28" HorizontalAlignment="Right" Margin="0,25,83,0" Name="label2" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>
